@@ -22,6 +22,8 @@ import './App.css';
 import Layout from './components/Layout';
 import RegionalSettings from './components/settings/RegionalSettings';
 import Profile from './components/settings/Profile';
+import UserGuide from './pages/UserGuide';
+import SystemStatus from './components/SystemStatus';
 
 function App() {
   return (
@@ -30,10 +32,14 @@ function App() {
         <Router>
           <Layout>
             <Routes>
+              <Route path="/" element={<Navigate to="/dashboard" replace />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/weather" element={<WeatherForecast />} />
+              <Route path="/user-guide" element={<UserGuide />} />
+              <Route path="/system-status" element={<SystemStatus />} />
               <Route
                 path="/weather"
                 element={<PrivateRoute element={<WeatherForecast />} />}
@@ -69,7 +75,6 @@ function App() {
                 element={<AdminRoute element={<AdminDashboard />} />}
               />
               <Route path="/fontawesome-test" element={<FontAwesomeTest />} />
-              <Route path="/" element={<Navigate to="/dashboard" />} />
             </Routes>
           </Layout>
         </Router>

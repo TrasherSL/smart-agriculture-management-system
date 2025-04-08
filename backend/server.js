@@ -15,6 +15,7 @@ const aiRoutes = require('./routes/ai');
 const irrigationRoutes = require('./routes/irrigation');
 const articleRoutes = require('./routes/articleRoutes');
 const userRoutes = require('./routes/users');
+const userguideRoutes = require('./routes/userguide');
 
 // Model imports
 const SystemLog = require('./models/SystemLog');
@@ -57,13 +58,14 @@ app.use('/api/ai', aiRoutes);
 app.use('/api/irrigation', irrigationRoutes);
 app.use('/api/articles', articleRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/userguide', userguideRoutes);
 
 // Health endpoints
 app.get('/', (req, res) => {
   res.json({
     status: 'active',
     version: '1.0.0',
-    services: ['auth', 'weather', 'admin', 'ai', 'irrigation', 'articles']
+    services: ['auth', 'weather', 'admin', 'ai', 'irrigation', 'articles', 'users', 'userguide']
   });
 });
 

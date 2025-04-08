@@ -86,6 +86,13 @@ const Dashboard = () => {
                                 Knowledge Base
                                 {isGuest && <span className="guest-access">Guest Access</span>}
                             </button>
+                            
+                            {/* User Guide - Available for Guest */}
+                            <button onClick={() => navigate('/user-guide')} className="user-guide-action">
+                                <span className="icon">📖</span>
+                                User Guide
+                                {isGuest && <span className="guest-access">Guest Access</span>}
+                            </button>
                         </div>
                     </div>
 

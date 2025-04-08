@@ -119,6 +119,15 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* User Guide button specific styling */
+.quick-actions button:nth-child(6) {
+    background-color: #4caf50;
+}
+
+.quick-actions button:nth-child(6):hover {
+    background-color: #388e3c;
+}
+
 /* About Section Styles */
 .about-card {
     grid-column: span 2;
