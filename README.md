@@ -25,11 +25,10 @@ SAMS is an end-to-end farm management system that is aimed at transforming farmi
   - Automated scheduling based on weather data
   - Water usage optimization
   - Regional weather integration
-  - Real-time monitoring
+  
 
 - **Crop Management**
-  - Crop recommendation engine
-  - Growth tracking
+  - Crop recommendation 
   - Disease detection
   - Pest management
 
