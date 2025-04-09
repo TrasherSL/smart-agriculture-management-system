@@ -212,7 +212,7 @@ const AdminDashboard = () => {
     const [successMessage, setSuccessMessage] = useState('');
     const [editingUser, setEditingUser] = useState(null);
     const [autoRefresh, setAutoRefresh] = useState(false);
-    const [refreshInterval, setRefreshInterval] = useState(30); // seconds
+    const [refreshInterval, setRefreshInterval] = useState(30);
 
     const loadAdminData = useCallback(async () => {
         try {

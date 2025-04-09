@@ -17,10 +17,9 @@ import './IrrigationSchedule.css';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-// Helper component for charts
+
 const Chart = ({ data, type }) => {
-    // Simple chart implementation using DIVs for the MVP
-    // In a real app, you'd use Chart.js, Recharts, or another chart library
+
     
     if (type === 'bar') {
         const maxValue = Math.max(...data.map(item => item.value));

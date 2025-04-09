@@ -4,7 +4,6 @@ import { AuthProvider } from './contexts/AuthContext';
 import { WeatherProvider } from './contexts/WeatherContext';
 import PrivateRoute from './components/PrivateRoute';
 import AdminRoute from './components/AdminRoute';
-import Navbar from './components/Navbar';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import ForgotPassword from './components/auth/ForgotPassword';
@@ -40,10 +39,6 @@ function App() {
               <Route path="/weather" element={<WeatherForecast />} />
               <Route path="/user-guide" element={<UserGuide />} />
               <Route path="/system-status" element={<SystemStatus />} />
-              <Route
-                path="/weather"
-                element={<PrivateRoute element={<WeatherForecast />} />}
-              />
               <Route path="/irrigation" element={<IrrigationSchedule />} />
               <Route
                 path="/irrigation/admin"

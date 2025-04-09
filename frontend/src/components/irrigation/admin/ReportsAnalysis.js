@@ -54,7 +54,8 @@ const ReportsAnalysis = () => {
                     
                     if (retries <= MAX_RETRIES) {
                         // Wait before retrying (increasing with each retry)
-                        await new Promise(resolve => setTimeout(resolve, 1000 * retries));
+                        const delay = 1000 * retries;
+                        await new Promise(resolve => setTimeout(resolve, delay));
                     } else {
                         throw retryError; // Re-throw to be caught by outer catch
                     }
